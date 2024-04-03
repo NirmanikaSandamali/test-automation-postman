@@ -41,24 +41,18 @@ jobs:
       - name: Install newman
         run: npm install -g newman
 
-      # install newman-reporter-htmlextra
-      - name: Install newman-reporter-htmlextra
-        run: npm install -g newman-reporter-htmlextra
-
       # install nodemon
       - name: Install nodemon
         run: npm install -g nodemon
+
+      # # install newman-reporter-htmlextra
+      # - name: Install newman reporter htmlextra
+      #   run: npm install -g newman-reporter-htmlextra
 
       - name: Run the API and Postman's tests
         run: |
           nodemon &
           sleep 20
-          newman run "HelloApi.postman_collection.json" -r htmlextra
+          newman run "HelloApi.postman_collection.json" 
 
-      # build and test the apps
-      # - name: build
-      #   run: |
-      # npm run build
-      # npm run test
-
-#HelloApi.postman_collection.json
+      
