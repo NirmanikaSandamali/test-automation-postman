@@ -53,7 +53,7 @@ jobs:
         run: |
           nodemon &
           sleep 20
-          newman run "HelloApi.postman_collection.json"-r htmlextra
+          newman run "HelloApi.postman_collection.json" -r htmlextra
 
       # build and test the apps
       # - name: build
